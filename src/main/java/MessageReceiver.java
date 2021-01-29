@@ -40,6 +40,8 @@ public class MessageReceiver
         {
             TextMessage textMessage=(TextMessage) message;
             System.out.println("Received Message " +textMessage.getText());
+            CrudOperations operations = new CrudOperations();
+            operations.insertMessage(textMessage.getText());
         }
 
         connection.close();

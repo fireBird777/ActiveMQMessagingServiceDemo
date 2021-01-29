@@ -45,7 +45,7 @@ public class MessageSender {
          * to create a producer and sending a message
          */
         MessageProducer producer = session.createProducer(destination);
-        TextMessage textMessage = session.createTextMessage("Hello world.");
+        TextMessage textMessage = session.createTextMessage("Hello Samira");
         producer.send(textMessage);
 
         System.out.println("Message "+textMessage.getText()+" Message sent successfully to the queue");
